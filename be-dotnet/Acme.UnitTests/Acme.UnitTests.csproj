@@ -17,4 +17,7 @@
       <ProjectReference Include="..\Acme.Api\Acme.Api.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Test\" />
+    </ItemGroup>
 </Project>
