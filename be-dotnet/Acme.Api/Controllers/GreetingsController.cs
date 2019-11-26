@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -28,11 +30,22 @@ namespace Acme.Api.Controllers
 
     public class GreetingBuilder
     {
-        public Greeting Build()
+        public Greeting Build(string name = "")
         {
+            string greetingText = "Hello, ";
+
+            if (name.Length <= 0)
+            {
+                greetingText += "World!";
+            }
+            else
+            {
+                greetingText += $"{name}!";
+            }
+
             return new Greeting
             {
-                Text = "Hello, World!"
+                Text = greetingText
             };
         }
     }

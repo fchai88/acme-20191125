@@ -12,10 +12,10 @@
   "dependencies": {
     "@types/jest": "^24",
     "@types/node": "^12",
-    "typescript": "^3",
-    "jest": "^24",
+    "jest": "^24.9.0",
+    "node-fetch": "^2",
     "ts-jest": "^24",
-    "node-fetch": "^2"
+    "typescript": "^3"
   },
   "jest": {
     "moduleFileExtensions": [
