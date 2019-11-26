@@ -240,7 +240,7 @@ namespace Acme.UnitTests.Test
 
                 if (IsItSplit(rolls[rollIndex], rolls[rollIndex + 1]))
                 {
-                    score = 10 + rolls[rollIndex + 2] + score;
+                    score += 10 + rolls[rollIndex + 2];
                 }
                 else if (IsItStrike(rolls[rollIndex]))
                 {
