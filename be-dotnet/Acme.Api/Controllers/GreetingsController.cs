@@ -24,6 +24,14 @@ namespace Acme.Api.Controllers
             
             return CommandResponse.WithData(greetingBuilding.Build());
         }
+
+        [HttpGet()]
+        public CommandResponse GetWithName(string name)
+        {
+            var greetingBuilder = new GreetingBuilder();
+            return CommandResponse.WithData(greetingBuilder.Build(name));
+        }
+
     }
 
     public class GreetingBuilder
@@ -34,6 +42,15 @@ namespace Acme.Api.Controllers
             {
                 Text = "Hello, World!"
             };
+
+        }
+        public Greeting Build(string name)
+        {
+            return new Greeting
+            {
+                Text = $"Hello, {name}!"
+            };
+
         }
     }
 
